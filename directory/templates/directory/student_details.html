@@ -1,0 +1,17 @@
+{% extends 'directory/base.html' %}
+
+{% block content %}
+
+<div style="width: 500px; margin:50px auto">
+    <div style="text-align:center; padding-bottom:50px"><img src="{{student.image.url}}" width="180" height="180"></div>
+
+    <h4>Last Name: {{student.lastName}}</h4>
+    <h4>First Name: {{student.firstName}}</h4>
+    <h4>Email: {{student.email}}</h4>
+    <h4>Contact: {{student.contact}}</h4>
+    <h4>Address: {{student.address}}</h4>
+    <h4>Course: {{student.course}}</h4>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'directory/base.html' %}
+
+{% block content %}
+
+<br>
+<h1 style="text-align:center"> Students</h1>
+
+<table class="table table-hover table-bordered">
+  <thead>
+    <tr>
+    <th scope="col">LastName</th>
+    <th scope="col">FirstName</th>
+    <th scope="col">Email</th>
+    <th scope="col">Contact</th>
+    <th scope="col">Course</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    {% for student in students %}
+
+    <tr>
+     <td><a href="{% url 'directory:student' student.id %}" class="nav-link" style="color:black">{{student.lastName}}</a></td>
+      <td><a href="{% url 'directory:student' student.id %}" class="nav-link" style="color:black">{{student.firstName}}</a></td>
+      <td><a href="{% url 'directory:student' student.id %}">{{student.email}}</a></td>
+      <td><a href="{% url 'directory:student' student.id %}" class="nav-link" style="color:black">{{student.contact}}</a></td>
+      <td><a href="{% url 'directory:student' student.id %}" class="nav-link" style="color:black">{{student.course}}</a></td>
+    </tr>
+
+    {% endfor %}
+
+  </tbody>
+</table>
+
+{% endblock %}
